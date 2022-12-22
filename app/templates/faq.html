@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='faq.css')}}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+{% extends "base.html" %}
+{% block title %}Frequently Asked Questions?{% endblock %}
+{% block body%}
+<div class="header"> <h1><br><b>Have a question?<br> Here are some answers you might be looking for!</b></h1> </div>
+<!-- all database should be shown in different boxes/tables 
+    despite their status -->
+    <section class="container my-5" id="maincontent">
+
+      <section id="accordion">
+
+        <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary border-top" aria-controls="faq-17" aria-expanded="false" data-toggle="collapse" href="#faq-17" role="button">
+        <div class="position-relative">
+            
+            <h2 class="h4 m-0 pr-3">
+              Where to find more details on a product?
+            </h2>
+            
+            <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+              <i class="fa fa-plus"></i>
+            
+            </div>
+          
+        </div>
+        </a>
+        
+        <div class="collapse" id="faq-17">
+          <div class="card card-body border-0 p-0">
+            
+            <p class="answer">If the pictures and descriptions are not enough, message me on instagram @_noursabbaghh for more details.</p>
+  
+          </div>
+        </div>
+  
+        <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary border-top" aria-controls="faq-18" aria-expanded="false" data-toggle="collapse" href="#faq-18" role="button">
+          <div class="position-relative">
+            
+            <h2 class="h4 m-0 pr-3">
+              How are shipping costs evaluated?
+            </h2>
+            
+            <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+              <i class="fa fa-plus"></i>
+            </div>
+          
+        </div>
+        </a>
+        
+        <div class="collapse" id="faq-18">
+          <div class="card card-body border-0 p-0">
+        
+            <p class="answer">Unfortunately, it is not possible to evaluate shipping costs until the order has been delivered, it will then be either cash on delivery or the courrier will arrive with a visa machine if you would like to pay by card.</p>
+            
+          </div>
+        </div>
+  
+        <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary border-top" aria-controls="faq-19" aria-expanded="false" data-toggle="collapse" href="#faq-19" role="button">
+          <div class="position-relative">
+            
+            <h2 class="h4 m-0 pr-3">
+              Where do you ship to?
+            </h2>
+            
+            <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+              <i class="fa fa-plus"></i>
+            </div>
+          
+           </div>
+        </a>
+        
+        <div class="collapse" id="faq-19">
+          <div class="card card-body border-0 p-0">
+            
+            <p class="answer">Currently, delivery options are only available to the cities that are in West Yorkshire. This will definitely change at some point in the future.</p>
+            
+          </div>
+        </div>
+  
+        <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary  border-top" aria-controls="faq-20" aria-expanded="false" data-toggle="collapse" href="#faq-20" role="button">
+          <div class="position-relative">
+            <h2 class="h4 m-0 pr-3">
+              What happens if I dont like a product?
+            </h2>
+            <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+              <i class="fa fa-plus"></i>
+            </div>
+          </div>
+        </a>
+        <div class="collapse" id="faq-20">
+          <div class="card card-body border-0 p-0">
+            <p class="answer">Since the clothes are already used it does not make sense to return them and then ship them to other customers further. Also there is no current solution to returning the products back to us. There is open room for discussion on returning items, you can message me on instagram @_noursabbaghh.</p>
+            <p>
+            </p>
+          </div>
+        </div>
+  
+        <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary  border-top" aria-controls="faq-21" aria-expanded="false" data-toggle="collapse" href="#faq-21" role="button">
+          <div class="position-relative">
+            <h2 class="h4 m-0 pr-3">
+              How often do you upload new products?
+            </h2>
+            <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+              <i class="fa fa-plus"></i>
+            </div>
+          </div>
+        </a>
+        <div class="collapse" id="faq-21">
+          <div class="card card-body border-0 p-0">
+            <p class="answer">Around every two weeks or so. If you dont find any products left, it means that everything is sold out and that I will be uploading soon.</p>
+            <p>
+            </p>
+          </div>
+        </div>
+
+        <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary  border-top" aria-controls="faq-22" aria-expanded="false" data-toggle="collapse" href="#faq-22" role="button">
+            <div class="position-relative">
+              <h2 class="h4 m-0 pr-3">
+                If I have any other questions, where do I contact you?
+              </h2>
+              <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+                <i class="fa fa-plus"></i>
+              </div>
+            </div>
+          </a>
+          <div class="collapse" id="faq-22">
+            <div class="card card-body border-0 p-0">
+              <p class="answer">Feel free to message me on instagram @_noursabbaghh at any time for any extra questions!
+              </p>
+              <p>
+              </p>
+            </div>
+          </div>
+    
+          <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary  border-top" aria-controls="faq-23" aria-expanded="false" data-toggle="collapse" href="#faq-23" role="button">
+            <div class="position-relative">
+              <h2 class="h4 m-0 pr-3">
+                What are your measurements?
+              </h2>
+              <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+                <i class="fa fa-plus"></i>
+              </div>
+            </div>
+          </a>
+          <div class="collapse" id="faq-23">
+            <table style="width:100%">
+              <tr>
+              
+                <th>Body Part</th>
+                <th>Measurements</th>
+                
+              </tr>
+              
+              <tr>
+              
+                <td>Shoulders</td>
+                <td>87cm</td>
+                
+              </tr>
+              
+              <tr>
+              
+                <td>Bust</td>
+                <td>80cm</td>
+             
+              </tr>
+                
+              <tr>
+              
+                <td>Waist</td>
+                <td>73cm</td>
+             
+              </tr> 
+              
+              <tr>
+              
+                <td>Hips</td>
+                <td>101cm</td>
+             
+              </tr>
+             
+              <tr>
+              
+                <td>Thighs</td>
+                <td>64cm</td>
+             
+              </tr>
+              
+               <tr>
+              
+                <td>Height</td>
+                <td>157cm</td>
+             
+              </tr>
+             
+            </table>
+            </div>
+          </div>
+
+      </section>
+    </section>
+  
+
+{% endblock %}

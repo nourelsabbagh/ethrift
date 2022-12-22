@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+
+<script>
+
+    function addToCart(productId) {
+        fetch('[your.local.host.]/cart/productId', 
+            {method: 'POST'}
+        )
+    }
+
+</script>
+
+{% block title%}Products{%endblock%}
+
+{%block content%}
+<br><br>
+
+<h1 style="color:rgb(10, 31, 10);font-style: italic; font-size: 30px; text-align: center; margin-top: 20px;">
+    Here are the following products available for the category you chose:
+</h1>
+
+{%endblock%}
+
+{%block body%}
+<br>
+{% for product in products %}
+<div class="product-item" style="color: white; background-color: rgb(141, 206, 141); margin-bottom: 30%;">
+    <br>
+    <h3 style="font-size: 30px; text-align: center;">{{ product.product }}</h3> 
+    <br>
+    <img src="static/img/products/{{ product.img }}" alt="failed to load {{product.product}} image" width="200px" height="200px" style="margin-left:35%">
+    <br><br>
+    <p style="font-size:20px; text-align: center;"> {{ product.size }} {{ product.color }}</p>
+    <p style=" text-align: center;"> ${{ product.price }}</p>
+    <p style="text-align: center;"> {{ product.description }}</p>
+<br>
+    <button onclick="addToCart({{product.id}})" type="button" style="background-color: rgb(96, 146, 96);" class="btn btn-primary">Add to Cart</button>
+</div>
+{% endfor %}
+
+{%endblock%}

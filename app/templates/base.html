@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <title>
+    {% block title%}{%endblock%}
+  </title>
+  <head>
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+  </head>
+
+<!-- creating a navigation bar -->
+  <body style="font-family: 'Lexend Deca', sans-serif; align-items: center;">
+    
+    <ul class="nav">
+      <li>
+        <a href="/">
+          <div class="logo">
+            &#8962
+          </div>
+      </a>
+    </li>
+
+      <li><a href="/tops">Tops</a></li>
+      <li><a href="/bottoms">Bottoms</a></li>
+      <li><a href="/outerwear">Outerwear</a></li>
+      <li><a href="/shoes">Shoes</a></li>
+      <li><a href="/shoes">Other</a></li>
+      <li><a href="/faq">FAQ</a></li>
+
+    <div style="float: right" class="right-hand">
+      <br>
+      <li><a href="/basket">Basket</a></li>
+      <li><a href="/register">Register</a></li>
+      <li><a href="/login">Login</a></li>
+    </div>
+    </ul>
+    
+        <!-- creates the main area where the block content is displayed -->
+        <div style="background-color: white" > 
+          
+          <!-- all flash messages from any site will display on this part of the page -->
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-success">
+                     {{ message }}
+                </div>
+                {% endfor %}
+    
+              {% endif %}
+            {% endwith %}
+            
+            {% block content%}{%endblock%}
+            
+            {% block body %}{% endblock %}
+          
+          </div>
+          </div>
+          </div>
+
+          <!-- Adds a footer to the bottom of the page -->
+          <footer class="container-fluid text-center">
+            <div class="footer-text"><p>Online thrift shopping from the comfort of your home!</p></div>
+          </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        </body>
+</html>

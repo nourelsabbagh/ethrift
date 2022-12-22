@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+    <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  </head>
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block body%}
+<br>
+<div>
+  
+  {% if current_user.is_anonymous %}
+  <h1 class="header1">
+    <a href="{{ url_for('login') }}">Login to be able to add to cart and start buying!</a>
+  </h1> 
+  {% else %}
+  <h1 class="header1">
+    Welcome to my closet, {{current_user.username}} :)
+  </h1>
+<br>
+  <a href="{{ url_for('logout') }}">Logout</a>
+  {% endif %}
+  
+</div>
+<br>
+<h2 class ="header2"><b>Second hand clothing in good condition at a great price!</b></h2>
+<br>
+<h1 class="header3">What are you looking for?</h1> 
+<br>
+
+<div class="row">
+
+    <div class="column">  
+      <img src="static/beanie.jpeg" alt="Bottoms" style="width:100%" a href="/bottoms">
+      <div class="overlay">
+        <div class="text"><b>TOPS</b></div>
+      </div>
+
+    </a>
+    </div>
+    
+    <div class="column">
+
+      <img src="static/beanie.jpeg" alt="Bottoms" style="width:100%" a href="/bottoms">
+      <div class="overlay">
+        <div class="text"><b>BOTTOMS</b></div>
+      </div>
+
+    </a>
+    </div>
+    
+    <div class="column">
+      
+        <img src="static/beanie.jpeg" alt="Coats/ Sweaters etc." style="width:100%" a href="/outerwear">
+        <div class="overlay">
+          <div class="text"><b>SHOES</b></div>
+        </div>
+
+    </div>
+    
+    <div class="column">
+        
+        <img src="static/beanie.jpeg" alt="Shoes" style="width:100%" a href="/shoes">
+        <div class="overlay">
+          <div class="text"><b>OUTERWEAR</b></div>
+        </div>
+
+    </div>
+      
+    <div class="column">
+
+        <img src="static/beanie.jpeg" alt="Other" a href="/other">
+        <div class="overlay">
+          <div class="text"><b>OTHER</b></div>
+        </div>
+      </div>
+    </div>
+  
+{% endblock %}
